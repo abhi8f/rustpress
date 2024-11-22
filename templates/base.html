@@ -9,9 +9,19 @@
     <header>
         <h1>My Knowledge Base</h1>
     </header>
+
+    <nav>
+        <ul>
+            {% for link in nav_links %}
+                <li>{{ link | safe }}</li>
+            {% endfor %}
+        </ul>
+    </nav>
+
     <main>
         {{ content | safe }}
     </main>
+
     <footer>
         <p>Generated with Rust</p>
     </footer>
